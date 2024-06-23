@@ -43,7 +43,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+    'blog',
+
+    # other Django apps
+    'tailwind',
+    'theme'
 ]
+
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,3 +138,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Set the path to the npm executable
+NPM_BIN_PATH = '/usr/bin/npm'
+
+# Print to verify the path (for debugging purposes)
+print(f'NPM_BIN_PATH is set to: {NPM_BIN_PATH}')
